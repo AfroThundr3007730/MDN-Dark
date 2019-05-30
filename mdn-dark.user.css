@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MDN Dark
-@version      0.1.0
+@version      0.2.0
 @description  Dark theme for the Mozilla Developer Network
 @namespace    AfroThundr3007730
 @author       AfroThundr
@@ -15,12 +15,60 @@
     background-color: #111;
     color: #777;
   }
+  /* nav menus */
   #main-header {
     background-color: #222;
   }
   #wiki-document-head {
     background-color: #333;
     color: #999;
+  }
+  .logo, .nav-footer-logo, .nav-footer-mozilla, .login-link .icon {
+    filter: invert(50%);
+  }
+  .icon-search {
+    filter: brightness(50%);
+  }
+  html:not(.no-js) .nav-main-item > a, .login > a {
+    color: #83d0f2;
+  }
+  .submenu {
+    background-color: #333;
+    border-top: 5px solid #9b9b9b;
+  }
+  .submenu .title {
+    color: #777;
+  }
+  .nav-main-item > a:focus, .nav-main-item > a:hover {
+    background-color: #333;
+  }
+  .quick-links :not(pre) > * > code, .quick-links :not(pre) > code {
+    color: #777;
+  }
+  /* buttons */
+  .button, button, input[type="button"], input[type="submit"] {
+    background-color: #222;
+    color: #777;
+  }
+  /* icons */
+  .blockIndicator::before, .geckoVersionNote::before, .inheritsbox::before,
+  .note::before, .notice::before, .overheadIndicator::before,
+  .standardNoteBlock::before, .warning::before {
+    filter: invert(50%);
+  }
+  .indicatorInHeadline::before, .inlineIndicator::before {
+    filter: invert(50%);
+  }
+  .external.external-icon::before {
+    filter: invert(80%);
+  }
+  #wikiArticle i.icon-beaker, #wikiArticle i.icon-stethoscope,
+  #wikiArticle i.icon-thumbs-down-alt, #wikiArticle i.icon-trash,
+  #wikiArticle i.icon-warning-sign {
+    filter: invert(50%);
+  }
+  .quick-links .sidebar-icon i[class^="icon-"] {
+    filter: invert(100%);
   }
   /* pre / code */
   :not(pre)>*>code, :not(pre)>code {
@@ -30,13 +78,50 @@
     background-color: black;
     color: #999;
   }
+  .highlight .highlight-span code, .highlight code,
+  .text-content h3 .highlight-span code, .text-content h3 code,
+  .text-content h5 .highlight-span code, .text-content h5 code {
+    color: #222 !important;
+  }
+  .index :not(pre) > * > code, .index :not(pre) > code,
+  .indexListTerm :not(pre) > * > code, .indexListTerm :not(pre) > code {
+    color: #777;
+  }
+  /* iframes */
+  .interactive {
+    filter: invert(100%) hue-rotate(180deg);
+  }
   /* notes */
   .draft, .indicator-warning, .note, .notice, .prefixBox, .privilegedBadge,
   .renamed, .secureContexts, .todo, .translationInProgress,
   .warning.warning-review {
     background-color: #222;
   }
+  .deprecated, .deprecatedBadge, .indicator-danger, .nonStandard,
+  .nonstandardBadge, .obsolete, .obsoleteBadge, .unimplemented,
+  .unimplementedBadge, .warning {
+    background-color: #222;
+  }
+  .domLevel, .experimental, .experimentalBadge, .firefoxVersionBadge,
+  .geckoMinVer, .geckoMinVerMethod, .geckoVersionBadge, .geckoVersionNote,
+  .htmlVer, .indicator-version, .jsMinVer, .jsMinVerHeader, .mbMinVer,
+  .mobileOnly, .notXPCOM, .projectSpecific, .smMinVerHeader, .standardNote,
+  .tbMinVer {
+    background-color: #222;
+  }
+  ul.tags li {
+    background-color: #333;
+    border-color: #222;
+  }
+  span[class*="spec-"]::before {
+    background-color: #111;
+  }
   /* tables */
+  .text-content .cssprop, .text-content .htmlelt, .text-content .learn-box,
+  .text-content .properties, .text-content .summary-box-events,
+  .text-content .summary-box-js {
+    background-color: #222;
+  }
   .text-content code[class*="language-"], .text-content pre[class*="language-"] {
     background-color: black;
   }
@@ -48,5 +133,21 @@
   }
   .text-content table.standard-table:not(.learn-box):not(.nostripe) tr:nth-child(2n+1) td {
     background-color: #333;
+  }
+  /* compatability table */
+  .bc-table {
+    background-color: #777;
+  }
+  .bc-table thead {
+    color: #111;
+  }
+  .bc-legend .ic-altname, .bc-legend .ic-deprecated, .bc-legend .ic-disabled,
+  .bc-legend .ic-experimental, .bc-legend .ic-footnote,
+  .bc-legend .ic-non-standard, .bc-legend .ic-prefix {
+    filter: invert(50%);
+  }
+  .bc-supports-no, .bc-supports-partial, .bc-supports-unknown, .bc-supports-yes,
+  .bc-table .bc-history {
+    filter: invert(100%);
   }
 }
