@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MDN Dark
-@version      0.2.0
+@version      0.3.0
 @description  Dark theme for the Mozilla Developer Network
 @namespace    AfroThundr3007730
 @author       AfroThundr
@@ -11,9 +11,28 @@
 ==/UserStyle== */
 @-moz-document domain("developer.mozilla.org") {
   /* main */
-  #content {
+  body, #content, .home-hacks {
     background-color: #111;
     color: #777;
+  }
+  .home-masthead {
+    background-color: #222;
+  }
+  .home-features a, .quick-links .toggle summary {
+    color: #777;
+  }
+  .callout-fx-dev {
+    filter: invert(100%) hue-rotate(180deg);
+  }
+  .text-content .card-grid li, .communitybox {
+    background-color: #222;
+  }
+  .search-form > input#home-q, .search-form > input#search-q {
+    background-color: #111;
+    color: #777;
+  }
+  .search-pane {
+    background-color: #222;
   }
   /* nav menus */
   #main-header {
@@ -22,12 +41,6 @@
   #wiki-document-head {
     background-color: #333;
     color: #999;
-  }
-  .logo, .nav-footer-logo, .nav-footer-mozilla, .login-link .icon {
-    filter: invert(50%);
-  }
-  .icon-search {
-    filter: brightness(50%);
   }
   html:not(.no-js) .nav-main-item > a, .login > a {
     color: #83d0f2;
@@ -45,12 +58,21 @@
   .quick-links :not(pre) > * > code, .quick-links :not(pre) > code {
     color: #777;
   }
+  s.deprecatedElement, s.nonStdElement, s.obsoleteElement {
+    opacity: .5;
+  }
   /* buttons */
   .button, button, input[type="button"], input[type="submit"] {
     background-color: #222;
     color: #777;
   }
   /* icons */
+  .logo, .nav-footer-logo, .nav-footer-mozilla, .login-link .icon {
+    filter: invert(50%);
+  }
+  .icon-search {
+    filter: brightness(50%);
+  }
   .blockIndicator::before, .geckoVersionNote::before, .inheritsbox::before,
   .note::before, .notice::before, .overheadIndicator::before,
   .standardNoteBlock::before, .warning::before {
@@ -88,7 +110,7 @@
     color: #777;
   }
   /* iframes */
-  .interactive {
+  .interactive, .live-sample-frame {
     filter: invert(100%) hue-rotate(180deg);
   }
   /* notes */
