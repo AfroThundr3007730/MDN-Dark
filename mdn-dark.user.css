@@ -1,0 +1,52 @@
+/* ==UserStyle==
+@name         MDN Dark
+@version      0.1.0
+@description  Dark theme for the Mozilla Developer Network
+@namespace    AfroThundr3007730
+@author       AfroThundr
+@homepageURL  https://github.com/AfroThundr3007730/MDN-Dark
+@supportURL   https://github.com/AfroThundr3007730/MDN-Dark/issues
+@updateURL    https://raw.githubusercontent.com/AfroThundr3007730/MDN-Dark/master/mdn-dark.user.css
+@license      GPL-3.0
+==/UserStyle== */
+@-moz-document domain("developer.mozilla.org") {
+  /* main */
+  #content {
+    background-color: #111;
+    color: #777;
+  }
+  #main-header {
+    background-color: #222;
+  }
+  #wiki-document-head {
+    background-color: #333;
+    color: #999;
+  }
+  /* pre / code */
+  :not(pre)>*>code, :not(pre)>code {
+    color: #111;
+  }
+  pre.syntaxbox, pre.twopartsyntaxbox {
+    background-color: black;
+    color: #999;
+  }
+  /* notes */
+  .draft, .indicator-warning, .note, .notice, .prefixBox, .privilegedBadge,
+  .renamed, .secureContexts, .todo, .translationInProgress,
+  .warning.warning-review {
+    background-color: #222;
+  }
+  /* tables */
+  .text-content code[class*="language-"], .text-content pre[class*="language-"] {
+    background-color: black;
+  }
+  .text-content table.standard-table:not(.learn-box) thead {
+    color: #111;
+  }
+  .text-content table.standard-table:not(.learn-box) td {
+    background-color: #222;
+  }
+  .text-content table.standard-table:not(.learn-box):not(.nostripe) tr:nth-child(2n+1) td {
+    background-color: #333;
+  }
+}
