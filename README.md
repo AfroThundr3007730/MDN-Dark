@@ -2,7 +2,7 @@
 
 Dark theme for the Mozilla Developer Network
 
-![Screenshot]()
+![Screenshot](https://i.imgur.com/KRmVJTQ.png)
 
 ## Installation
 
