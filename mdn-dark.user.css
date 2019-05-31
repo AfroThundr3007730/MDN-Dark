@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MDN Dark
-@version      0.4.0
+@version      0.5.0
 @description  Dark theme for the Mozilla Developer Network
 @namespace    AfroThundr3007730
 @author       AfroThundr
@@ -10,96 +10,118 @@
 @license      GPL-3.0
 ==/UserStyle== */
 @-moz-document domain("developer.mozilla.org") {
+  :root {
+    --base-black: #111;
+    --deep-black: #080808;
+    --dark-gray-one: #222;
+    --dark-gray-two: #333;
+    --mid-gray-one: #777;
+    --mid-gray-two: #999;
+    --plain-gray: #808080;
+    --code-gray: #9b9b9b;
+    --light-blue: #83d0f2;
+    --dark-blue: #3d7e9a;
+    --deep-red: #900;
+    --off-white: #eee;
+  }
   /* main */
   html, body, #content, .home-hacks {
-    background-color: #111;
-    color: #777;
+    background-color: var(--base-black);
+    color: var(--mid-gray-one);
   }
   h1, h2, h3, h4, h5, h6, header {
-    color: #999;
+    color: var(--mid-gray-two);
   }
   .home-masthead {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
   }
   .home-features a, .quick-links .toggle summary {
-    color: #83d0f2;
+    color: var(--light-blue);
   }
   .callout-fx-dev {
     filter: invert(100%) hue-rotate(180deg);
   }
   .text-content .card-grid li, .communitybox, .moreinfo, .user-head,
   .callout-box {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
   }
-  .search-form > input#home-q, .search-form > input#search-q {
-    background-color: #111;
-    color: #777;
+  #content #wiki-content article a.new {
+    color: var(--deep-red);
   }
-  .search-pane {
-    background-color: #222;
+  img, video {
+    background-color: var(--off-white);
   }
   /* meta */
   .activity thead {
-    background-color: #333;
+    background-color: var(--dark-gray-two);
   }
   .slug-change {
-    background-color: #222;
-    border-color: #333;
+    background-color: var(--dark-gray-one);
+    border-color: var(--dark-gray-two);
   }
   .first-contrib-welcome {
-    background-color: #222;
-    border-color: #333;
+    background-color: var(--dark-gray-one);
+    border-color: var(--dark-gray-two);
   }
   .cke_top, .cke_bottom {
     filter: invert(100%) hue-rotate(180deg);
   }
   #page-tags li {
-    background-color: #333;
-    border-color: #222;
-    color: #3d7e9a;
+    background-color: var(--dark-gray-two);
+    border-color: var(--dark-gray-one);
+    color: var(--dark-blue);
   }
   /* nav menus */
   #main-header {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
   }
   #wiki-document-head, .document-head {
-    background-color: #333;
-    color: #999;
+    background-color: var(--dark-gray-two);
+    color: var(--mid-gray-two);
   }
   #main-header .nav-main-item > a, .login > a, .toolbox > ul > li > a {
-    color: #83d0f2;
+    color: var(--light-blue);
   }
   .submenu {
-    background-color: #333;
-    border-top: 5px solid #9b9b9b;
+    background-color: var(--dark-gray-two);
+    border-top: 5px solid var(--code-gray);
   }
   .submenu .title, .footer-title {
-    color: #777;
+    color: var(--mid-gray-one);
   }
   .nav-main-item > a:focus, .nav-main-item > a:hover, .login > a:focus,
   .login > a:hover, .toolbox > ul > li > a:focus, .toolbox > ul > li > a:hover {
-    background-color: #333;
-    color: #83d0f2;
+    background-color: var(--dark-gray-two);
+    color: var(--light-blue);
   }
   s.deprecatedElement, s.nonStdElement, s.obsoleteElement {
     opacity: .5;
   }
-  /* buttons */
-  .button, button, input[type="button"], input[type="submit"] {
-    background-color: #222;
-    color: #777;
-  }
   /* forms */
+  .button, button, input[type="button"], input[type="submit"] {
+    background-color: var(--dark-gray-one);
+    color: var(--mid-gray-one);
+  }
   input[type=email], input[type=number], input[type=password],
   input[type=search], input[type=text], input[type=url], textarea {
-    color: #999;
-    background-color: #222;
-    border-color: #333;
+    color: var(--mid-gray-two);
+    background-color: var(--dark-gray-one);
+    border-color: var(--dark-gray-two);
   }
   input, optgroup, option, select, textarea {
-    color: #999;
-    background-color: #333;
-    border-color: #222;
+    color: var(--mid-gray-two);
+    background-color: var(--dark-gray-one);
+    border-color: var(--dark-gray-two);
+  }
+  .search-form > input#home-q, .search-form > input#search-q {
+    background-color: var(--base-black);
+    color: var(--mid-gray-one);
+  }
+  .search-pane {
+    background-color: var(--dark-gray-one);
+  }
+  .search-results-container mark {
+    color: var(--mid-gray-two);
   }
   /* icons */
   .logo, .nav-footer-logo, .nav-footer-mozilla, .login-link .icon {
@@ -129,24 +151,35 @@
   }
   /* pre / code */
   :not(pre) > * > code, :not(pre) > code {
-    background-color: #9b9b9b;
-    color: #111;
-  }
-  .quick-links :not(pre) > * > code, .quick-links :not(pre) > code {
-    color: #777;
+    background-color: var(--code-gray);
+    color: var(--base-black);
   }
   pre.syntaxbox, pre.twopartsyntaxbox {
-    background-color: black;
-    color: #999;
+    background-color: var(--deep-black);
+    color: var(--code-gray);
+  }
+  .quick-links :not(pre) > * > code, .quick-links :not(pre) > code {
+    color: var(--code-gray);
   }
   .highlight .highlight-span code, .highlight code,
   .text-content h3 .highlight-span code, .text-content h3 code,
   .text-content h5 .highlight-span code, .text-content h5 code {
-    color: #222 !important;
+    background-color: var(--code-gray) !important;
+    color: var(--dark-gray-one) !important;
   }
   .index :not(pre) > * > code, .index :not(pre) > code,
   .indexListTerm :not(pre) > * > code, .indexListTerm :not(pre) > code {
-    color: #777;
+    color: var(--code-gray);
+  }
+  .text-content code[class*="language-"], .text-content pre[class*="language-"] {
+    color: var(--plain-gray);
+  }
+  .text-content pre code {
+    color: var(--code-gray);
+  }
+  .text-content pre.line-numbers {
+    background-color: var(--deep-black);
+    color: var(--code-gray);
   }
   /* iframes */
   .interactive, .live-sample-frame {
@@ -156,54 +189,58 @@
   .draft, .indicator-warning, .note, .notice, .prefixBox, .privilegedBadge,
   .renamed, .secureContexts, .todo, .translationInProgress,
   .warning.warning-review {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
   }
   .deprecated, .deprecatedBadge, .indicator-danger, .nonStandard,
   .nonstandardBadge, .obsolete, .obsoleteBadge, .unimplemented,
   .unimplementedBadge, .warning {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
   }
   .domLevel, .experimental, .experimentalBadge, .firefoxVersionBadge,
   .geckoMinVer, .geckoMinVerMethod, .geckoVersionBadge, .geckoVersionNote,
   .htmlVer, .indicator-version, .jsMinVer, .jsMinVerHeader, .mbMinVer,
   .mobileOnly, .notXPCOM, .projectSpecific, .smMinVerHeader, .standardNote,
   .tbMinVer {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
+  }
+  .reviews {
+    background-color: var(--dark-gray-one);
+    color: var(--mid-gray-one);
   }
   ul.tags li {
-    background-color: #333;
-    border-color: #222;
+    background-color: var(--dark-gray-two);
+    border-color: var(--dark-gray-one);
   }
   ul.tags li a {
-    color: #3d7e9a;
+    color: var(--dark-blue);
   }
   span[class*="spec-"]::before {
-    background-color: #111;
+    background-color: var(--base-black);
   }
   /* tables */
   .text-content .cssprop, .text-content .htmlelt, .text-content .learn-box,
   .text-content .properties, .text-content .summary-box-events,
   .text-content .summary-box-js {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
   }
   .text-content code[class*="language-"], .text-content pre[class*="language-"] {
-    background-color: black;
+    background-color: var(--deep-black);
   }
   .text-content table.standard-table:not(.learn-box) thead {
-    color: #111;
+    color: var(--base-black);
   }
   .text-content table.standard-table:not(.learn-box) td {
-    background-color: #222;
+    background-color: var(--dark-gray-one);
   }
   .text-content table.standard-table:not(.learn-box):not(.nostripe) tr:nth-child(2n+1) td {
-    background-color: #333;
+    background-color: var(--dark-gray-two);
   }
   /* compatability table */
   .bc-table {
-    background-color: #777;
+    background-color: var(--mid-gray-one);
   }
   .bc-table thead {
-    color: #111;
+    color: var(--base-black);
   }
   .bc-legend .ic-altname, .bc-legend .ic-deprecated, .bc-legend .ic-disabled,
   .bc-legend .ic-experimental, .bc-legend .ic-footnote,
