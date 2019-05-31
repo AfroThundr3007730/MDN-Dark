@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         MDN Dark
-@version      0.3.0
+@version      0.4.0
 @description  Dark theme for the Mozilla Developer Network
 @namespace    AfroThundr3007730
 @author       AfroThundr
@@ -11,20 +11,24 @@
 ==/UserStyle== */
 @-moz-document domain("developer.mozilla.org") {
   /* main */
-  body, #content, .home-hacks {
+  html, body, #content, .home-hacks {
     background-color: #111;
     color: #777;
+  }
+  h1, h2, h3, h4, h5, h6, header {
+    color: #999;
   }
   .home-masthead {
     background-color: #222;
   }
   .home-features a, .quick-links .toggle summary {
-    color: #777;
+    color: #83d0f2;
   }
   .callout-fx-dev {
     filter: invert(100%) hue-rotate(180deg);
   }
-  .text-content .card-grid li, .communitybox {
+  .text-content .card-grid li, .communitybox, .moreinfo, .user-head,
+  .callout-box {
     background-color: #222;
   }
   .search-form > input#home-q, .search-form > input#search-q {
@@ -34,29 +38,48 @@
   .search-pane {
     background-color: #222;
   }
+  /* meta */
+  .activity thead {
+    background-color: #333;
+  }
+  .slug-change {
+    background-color: #222;
+    border-color: #333;
+  }
+  .first-contrib-welcome {
+    background-color: #222;
+    border-color: #333;
+  }
+  .cke_top, .cke_bottom {
+    filter: invert(100%) hue-rotate(180deg);
+  }
+  #page-tags li {
+    background-color: #333;
+    border-color: #222;
+    color: #3d7e9a;
+  }
   /* nav menus */
   #main-header {
     background-color: #222;
   }
-  #wiki-document-head {
+  #wiki-document-head, .document-head {
     background-color: #333;
     color: #999;
   }
-  html:not(.no-js) .nav-main-item > a, .login > a {
+  #main-header .nav-main-item > a, .login > a, .toolbox > ul > li > a {
     color: #83d0f2;
   }
   .submenu {
     background-color: #333;
     border-top: 5px solid #9b9b9b;
   }
-  .submenu .title {
+  .submenu .title, .footer-title {
     color: #777;
   }
-  .nav-main-item > a:focus, .nav-main-item > a:hover {
+  .nav-main-item > a:focus, .nav-main-item > a:hover, .login > a:focus,
+  .login > a:hover, .toolbox > ul > li > a:focus, .toolbox > ul > li > a:hover {
     background-color: #333;
-  }
-  .quick-links :not(pre) > * > code, .quick-links :not(pre) > code {
-    color: #777;
+    color: #83d0f2;
   }
   s.deprecatedElement, s.nonStdElement, s.obsoleteElement {
     opacity: .5;
@@ -65,6 +88,18 @@
   .button, button, input[type="button"], input[type="submit"] {
     background-color: #222;
     color: #777;
+  }
+  /* forms */
+  input[type=email], input[type=number], input[type=password],
+  input[type=search], input[type=text], input[type=url], textarea {
+    color: #999;
+    background-color: #222;
+    border-color: #333;
+  }
+  input, optgroup, option, select, textarea {
+    color: #999;
+    background-color: #333;
+    border-color: #222;
   }
   /* icons */
   .logo, .nav-footer-logo, .nav-footer-mozilla, .login-link .icon {
@@ -93,8 +128,12 @@
     filter: invert(100%);
   }
   /* pre / code */
-  :not(pre)>*>code, :not(pre)>code {
+  :not(pre) > * > code, :not(pre) > code {
+    background-color: #9b9b9b;
     color: #111;
+  }
+  .quick-links :not(pre) > * > code, .quick-links :not(pre) > code {
+    color: #777;
   }
   pre.syntaxbox, pre.twopartsyntaxbox {
     background-color: black;
@@ -134,6 +173,9 @@
   ul.tags li {
     background-color: #333;
     border-color: #222;
+  }
+  ul.tags li a {
+    color: #3d7e9a;
   }
   span[class*="spec-"]::before {
     background-color: #111;

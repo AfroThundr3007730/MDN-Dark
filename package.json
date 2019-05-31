@@ -1,7 +1,7 @@
 {
   "name": "mdn-dark",
   "title": "MDN Dark",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Dark theme for the Mozilla Developer Network",
   "license": "GPL-3.0",
   "repository": "AfroThundr3007730/MDN-Dark",
@@ -28,7 +28,7 @@
     "minor": "npx ver -p minor mdn-dark.user.css",
     "patch": "npx ver -p patch mdn-dark.user.css",
     "perfectionist": "npx perfectionist mdn-dark.user.css mdn-dark.user.css --indentSize 2 --maxAtRuleLength 250",
-    "stylelint": "npx stylelint --quiet --color -- mdn-dark.user.css",
+    "stylelint": "npx stylelint --color -- mdn-dark.user.css",
     "test": "npm run eslint && npm run stylelint",
     "update": "npx updates -cu && npm install"
   }
