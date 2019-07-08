@@ -32,6 +32,10 @@
   h1, h2, h3, h4, h5, h6, header {
     color: var(--mid-gray-two);
   }
+  .text-content #wikiArticle > blockquote + h2,
+  .text-content #wikiArticle > hr + h2 {
+    background-color: var(--base-black);
+  }
   .home-masthead {
     background-color: var(--dark-gray-one);
   }
@@ -47,6 +51,9 @@
   }
   #content #wiki-content article a.new {
     color: var(--deep-red);
+  }
+  .licenseblock, .originaldocinfo {
+    background-color: var(--dark-gray-one);
   }
   img, video {
     background-color: var(--off-white);
