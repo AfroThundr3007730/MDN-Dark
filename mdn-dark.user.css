@@ -130,15 +130,15 @@
   .icon-search {
     filter: brightness(50%);
   }
-  .blockIndicator::before, .geckoVersionNote::before, .inheritsbox::before,
-  .note::before, .notice::before, .overheadIndicator::before,
-  .standardNoteBlock::before, .warning::before {
+  .blockIndicator:before, .geckoVersionNote:before, .inheritsbox:before,
+  .note:before, .notice:before, .overheadIndicator:before,
+  .standardNoteBlock:before, .warning:before {
     filter: invert(50%);
   }
-  .indicatorInHeadline::before, .inlineIndicator::before {
+  .indicatorInHeadline:before, .inlineIndicator:before {
     filter: invert(50%);
   }
-  .external.external-icon::before {
+  .external.external-icon:before {
     filter: invert(80%);
   }
   #wikiArticle i.icon-beaker, #wikiArticle i.icon-stethoscope,
@@ -217,7 +217,7 @@
   ul.tags li a {
     color: var(--dark-blue);
   }
-  span[class*="spec-"]::before {
+  span[class*="spec-"]:before {
     background-color: var(--base-black);
   }
   /* tables */
