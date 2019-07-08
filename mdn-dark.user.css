@@ -191,6 +191,9 @@
   .warning.warning-review {
     background-color: var(--dark-gray-one);
   }
+  .indicator-info, .optional, .template-jsOverrides {
+    background-color: var(--dark-gray-one);
+  }
   .deprecated, .deprecatedBadge, .indicator-danger, .nonStandard,
   .nonstandardBadge, .obsolete, .obsoleteBadge, .unimplemented,
   .unimplementedBadge, .warning {
@@ -226,7 +229,7 @@
   .text-content code[class*="language-"], .text-content pre[class*="language-"] {
     background-color: var(--deep-black);
   }
-  .text-content table.standard-table:not(.learn-box) thead {
+  .text-content table.standard-table:not(.learn-box) th {
     color: var(--base-black);
   }
   .text-content table.standard-table:not(.learn-box) td {
@@ -235,11 +238,17 @@
   .text-content table.standard-table:not(.learn-box):not(.nostripe) tr:nth-child(2n+1) td {
     background-color: var(--dark-gray-two);
   }
+  .text-content table.standard-table:not(.learn-box) td.header,
+  .text-content table.standard-table:not(.learn-box) th,
+  .text-content table.standard-table:not(.learn-box) td,
+  .text-content table.standard-table:not(.learn-box) {
+    border-color: var(--base-black);
+  }
   /* compatability table */
   .bc-table {
     background-color: var(--mid-gray-one);
   }
-  .bc-table thead {
+  .bc-table th {
     color: var(--base-black);
   }
   .bc-legend .ic-altname, .bc-legend .ic-deprecated, .bc-legend .ic-disabled,
