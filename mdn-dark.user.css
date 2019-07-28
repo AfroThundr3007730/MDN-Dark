@@ -104,6 +104,18 @@
   s.deprecatedElement, s.nonStdElement, s.obsoleteElement {
     opacity: .5;
   }
+  /* survey banner */
+  .cta-background-linear, .mdn-cta-container .mdn-cta-content-container,
+  .mdn-cta-container .mdn-cta-button-container,
+  .mdn-cta-container .mdn-cta-button-container:before {
+    background: none;
+  }
+  .mdn-cta-container .mdn-cta-content {
+    box-shadow: 5px 0 5px var(--mid-gray-one);
+  }
+  #developer_needs {
+    background-color: var(--dark-gray-one);
+  }
   /* forms */
   .button, button, input[type="button"], input[type="submit"] {
     background-color: var(--dark-gray-one);
