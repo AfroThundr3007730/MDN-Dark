@@ -200,6 +200,14 @@
     background-color: var(--deep-black);
     color: var(--code-gray);
   }
+  .text-content .example-bad, .text-content .example-bad::after,
+  .text-content pre[class*="language-"].example-bad,
+  .text-content pre[class*="language-"].example-bad::after,
+  .text-content .example-good, .text-content .example-good::after,
+  .text-content pre[class*="language-"].example-good,
+  .text-content pre[class*="language-"].example-good::after {
+    background-color: var(--deep-black);
+  }
   /* iframes */
   .interactive, .live-sample-frame {
     filter: invert(100%) hue-rotate(180deg);
