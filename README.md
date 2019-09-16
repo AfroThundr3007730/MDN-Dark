@@ -9,7 +9,7 @@
 
 Dark theme for the Mozilla Developer Network
 
-![Screenshot](https://i.imgur.com/KRmVJTQ.png)
+![Screenshot](https://i.imgur.com/UFMecPX.png)
 
 ## Installation
 
