@@ -12,6 +12,7 @@ There are a number of ways to get involved with the development of this MDN Dark
 ## How to Report Style issues
 
 ### I don't know CSS
+
 If you don't know CSS very well and have found a missing style, please include as much as possible of following information when opening an issue:
 
 * Screenshot of the problem; include the element(s) in the console if at all possible
@@ -19,17 +20,19 @@ If you don't know CSS very well and have found a missing style, please include a
   * Please include both the HTML view and the element with the problem in the screenshot (see [issue #119](https://github.com/StylishThemes/GitHub-Dark/issues/119) for an example from the GitHub-Dark repository)
 * A URL to the page (if public).
 
-### I rock at CSS & GitHub!
+### I rock at CSS & GitHub
+
 * Follow the style guide below
 * Make any needed changes, then send us a pull request
 * Please include a URL to the page (if public)
 
 ## Style Guide
 
-* Use the provided `.editorconfig` file with your code editor. Don't know what that is? Then check out http://editorconfig.org/.
+* Use the provided `.editorconfig` file with your code editor. Don't know what that is? Then check out [EditorConfig](https://editorconfig.org/).
 * Limit to the [K&R (KNF variation style)](https://en.wikipedia.org/wiki/Indentation_style#Variant:_BSD_KNF), and **2 SPACE INDENTATION** (no tabs, and not more, and not less than 2 spaces).
 
   * K&R - KNF Variation Example:
+
     ```css
     element[attr='value'] {
     ··property: value;
@@ -37,6 +40,7 @@ If you don't know CSS very well and have found a missing style, please include a
     ```
 
   * **Not Allman**
+
     ```css
     element[property='value']
     {
@@ -45,6 +49,7 @@ If you don't know CSS very well and have found a missing style, please include a
     ```
 
   * Strict space between the `selector` and the `{`:
+
     ```css
     /* good */
     element[attr='value'] { }
@@ -54,6 +59,7 @@ If you don't know CSS very well and have found a missing style, please include a
     ```
 
   * 2 Space indentation
+
     ```css
     /* good */
     ··property: value;
@@ -84,7 +90,7 @@ If you don't know CSS very well and have found a missing style, please include a
 
 * Create & change into a new branch of your local MDN-Dark repository.
 * Open the style in the Stylus editor, and make sure to have "live preview" checked for testing.
-* Once you are satisfied with the changes, select all the CSS (<kbd>Ctrl</kbd> + <kbd>a</kbd>), copy (<kbd>Ctrl</kbd> + <kbd>c</kbd>) then paste (<kbd>Ctrl</kbd> + <kbd>v</kbd>) it into your editor.
+* Once you are satisfied with the changes, select all the CSS (`Ctrl + A`), copy (`Ctrl + C`) then paste (`Ctrl + V`) it into your editor.
 * Run `npm test` to test the CSS changes.
 * Now you can add and commit the changes of the `mdn-dark.user.css` file to your fork's branch.
 * If you haven't already contributed, then run `npm run authors` to add your name to our list of contributors :smile:
