@@ -109,6 +109,9 @@
   s.deprecatedElement, s.nonStdElement, s.obsoleteElement {
     opacity: .5;
   }
+  li.webextension-api-sidebar {
+    background-color: var(--gray-2);
+  }
   /* survey banner */
   .cta-background-linear, .mdn-cta-container .mdn-cta-content-container,
   .mdn-cta-container .mdn-cta-button-container,
