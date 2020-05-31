@@ -73,7 +73,7 @@
     background-color: var(--blue-2);
   }
   .titlebar-container {
-    background-color: var(--gray-2);
+    background-color: var(--gray-3);
     border-color: var(--gray-5);
   }
   .full-width-row-container {
@@ -120,6 +120,15 @@
   }
   #main-header .nav-main-item > a, .login > a, .toolbox > ul > li > a {
     color: var(--blue-1);
+  }
+  .main-menu, .page-header {
+    background-color: var(--gray-2);
+  }
+  .header-search form {
+    background-color: transparent;
+  }
+  .header-search input.search-input-field {
+    color: var(--gray-9a);
   }
   .submenu {
     background-color: var(--gray-3);
