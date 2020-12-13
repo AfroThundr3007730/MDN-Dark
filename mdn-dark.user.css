@@ -36,7 +36,7 @@
     color: var(--gray-9);
   }
   .title {
-    color: var(--gray-7);
+    color: var(--gray-9);
   }
   .text-content #wikiArticle > blockquote + h2,
   .text-content #wikiArticle > hr + h2 {
