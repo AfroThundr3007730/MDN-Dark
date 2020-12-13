@@ -11,24 +11,23 @@
     "node": ">=10"
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
-    "eslint-config-silverwind": "^13.4.3",
+    "eslint": "^7.15.0",
+    "eslint-config-silverwind": "^26.0.0",
     "perfectionist": "^2.4.0",
-    "stylelint": "^13.6.0",
+    "stylelint": "^13.8.0",
     "stylelint-config-standard": "^20.0.0",
-    "updates": "^10.2.13",
-    "versions": "^8.4.0"
+    "updates": "^11.4.0",
+    "versions": "^8.4.3"
   },
   "scripts": {
     "authors": "bash tools/authors",
     "clean": "npm run perfectionist && node tools/fix-perfectionist.js",
-    "eslint": "eslint --quiet --color tools/*.js",
-    "patch": "npx ver -p patch mdn-dark.user.css",
-    "minor": "npx ver -p minor mdn-dark.user.css",
-    "major": "npx ver -p major mdn-dark.user.css",
-    "perfectionist": "npx perfectionist mdn-dark.user.css mdn-dark.user.css --indentSize 2 --maxAtRuleLength 250",
-    "stylelint": "npx stylelint --color -- mdn-dark.user.css",
-    "test": "npm run eslint && npm run stylelint",
-    "update": "npx updates -cu && rm -rf node_modules && npm install"
+    "lint": "eslint tools/*.js && stylelint mdn-dark.user.css",
+    "patch": "versions -p -C patch mdn-dark.user.css",
+    "minor": "versions -p -C minor mdn-dark.user.css",
+    "major": "versions -p -C major mdn-dark.user.css",
+    "perfectionist": "perfectionist mdn-dark.user.css mdn-dark.user.css --indentSize 2 --maxAtRuleLength 250",
+    "test": "npm run lint",
+    "update": "updates -cu && npm install"
   }
 }
