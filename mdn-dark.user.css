@@ -14,6 +14,7 @@
     --gray-1: #111;
     --gray-2: #222;
     --gray-3: #333;
+    --gray-5: #555;
     --gray-7: #777;
     --gray-9: #999;
     --gray-e: #eee;
@@ -27,7 +28,7 @@
   /* main */
   html, body, #content, .home-hacks {
     background-color: var(--gray-1);
-    color: var(--gray-7);
+    color: var(--gray-9);
   }
   main {
     background: var(--gray-1);
@@ -126,6 +127,7 @@
   }
   .header-search form {
     background-color: transparent;
+    border-color: var(--gray-5);
   }
   .header-search input.search-input-field {
     color: var(--gray-9a);
@@ -162,6 +164,12 @@
   .breadcrumbs li a.crumb-current-page:link,
   .breadcrumbs li a.crumb-current-page:visited {
     color: var(--gray-9a);
+  }
+  .signin-link {
+    color: var(--gray-7);
+  }
+  .signin-link:hover {
+    background-color: var(--gray-3);
   }
   /* survey banner */
   .cta-background-linear, .mdn-cta-container .mdn-cta-content-container,
@@ -297,6 +305,11 @@
   .htmlVer, .indicator-version, .jsMinVer, .jsMinVerHeader, .mbMinVer,
   .mobileOnly, .notXPCOM, .projectSpecific, .smMinVerHeader, .standardNote,
   .tbMinVer {
+    background-color: var(--gray-2);
+  }
+  .indicatorInHeadline, .inlineIndicator, .spec-CR::before, .spec-Draft::before,
+  .spec-ED::before, .spec-Living::before, .spec-PR::before, .spec-RC::before,
+  .spec-REC::before, .spec-RFC::before, .spec-Standard::before, .spec-WD::before {
     background-color: var(--gray-2);
   }
   .reviews {
