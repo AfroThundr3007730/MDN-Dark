@@ -23,6 +23,7 @@
     --gray-9a: #9a9a9a;
     --blue-1: #83d0f2;
     --blue-2: #3d7e9a;
+    --blue-3: #36c;
     --red-1: #900;
   }
   /* main */
@@ -36,12 +37,14 @@
   h1, h2, h3, h4, h5, h6, header {
     color: var(--gray-9);
   }
+  a:link, a:visited {
+    color: var(--blue-3);
+  }
+  .article h2 a:link, .article h2 a:visited, .article h2 code {
+    color: var(--blue-2);
+  }
   .title {
     color: var(--gray-9);
-  }
-  .text-content #wikiArticle > blockquote + h2,
-  .text-content #wikiArticle > hr + h2 {
-    background-color: var(--gray-1);
   }
   .home-masthead {
     background-color: var(--gray-2);
@@ -49,15 +52,18 @@
   .home-features a, .quick-links .toggle summary {
     color: var(--blue-1);
   }
-  .callout-fx-dev {
+  .callout-fx-dev, .callout-featured {
     filter: invert(100%) hue-rotate(180deg);
   }
   .text-content .card-grid li, .communitybox, .moreinfo, .user-head,
-  .callout-box {
+  .callout-box, .callout {
     background-color: var(--gray-2);
   }
   #content #wiki-content article a.new {
     color: var(--red-1);
+  }
+  .metadata {
+    background-color: var(--gray-08);
   }
   .licenseblock, .originaldocinfo {
     background-color: var(--gray-2);
@@ -90,6 +96,9 @@
   }
   .callout-box {
     border-color: var(--gray-5);
+  }
+  mark {
+    color: var(--gray-e);
   }
   /* meta */
   .activity thead {
@@ -125,12 +134,16 @@
   .main-menu, .page-header {
     background-color: var(--gray-2);
   }
-  .header-search form {
+  ul.main-menu, .page-header-main {
     background-color: transparent;
-    border-color: var(--gray-5);
   }
-  .header-search input.search-input-field {
-    color: var(--gray-9a);
+  ul.main-menu .top-level-entry::before {
+    filter: invert(60%);
+  }
+  ul.main-menu li ul {
+    background-color: var(--gray-2);
+    box-shadow: none;
+    color: var(--blue-1);
   }
   .submenu {
     background-color: var(--gray-3);
@@ -163,9 +176,12 @@
   }
   .breadcrumbs li a.crumb-current-page:link,
   .breadcrumbs li a.crumb-current-page:visited {
-    color: var(--gray-9a);
+    color: var(--blue-3);
   }
-  .signin-link {
+  .breadcrumbs li:last-child a:link, .breadcrumbs li:last-child a:visited {
+    color: var(--blue-3);
+  }
+  .signin-link, a.signin-link {
     color: var(--gray-7);
   }
   .signin-link:hover {
@@ -202,6 +218,14 @@
   .header-search {
     background-color: var(--gray-2);
   }
+  .header-search form {
+    background-color: transparent;
+    border-color: var(--gray-5);
+  }
+  .header-search input.search-input-field {
+    border-color: var(--gray-5);
+    color: var(--gray-9a);
+  }
   .search-form > input#home-q, .search-form > input#search-q {
     background-color: var(--gray-1);
     color: var(--gray-7);
@@ -211,6 +235,9 @@
   }
   .search-results-container mark {
     color: var(--gray-9);
+  }
+  .article .prev-next a.button, .article .prevnext a.button {
+    color: var(--gray-e);
   }
   /* icons */
   .icon-search {
@@ -240,11 +267,15 @@
     filter: invert(100%);
   }
   /* pre / code */
-  :not(pre) > * > code, :not(pre) > code {
-    background-color: var(--gray-9a);
-    color: var(--gray-1);
+  code {
+    background-color: var(--gray-2);
+    color: var(--gray-9a);
   }
-  pre.syntaxbox, pre.twopartsyntaxbox {
+  a code {
+    color: var(--blue-2);
+  }
+  pre, table pre, pre.syntaxbox, pre.twopartsyntaxbox, .example-bad,
+  .example-good, .notranslate {
     background-color: var(--gray-08);
     color: var(--gray-9a);
   }
@@ -261,55 +292,23 @@
   .indexListTerm :not(pre) > * > code, .indexListTerm :not(pre) > code {
     color: var(--gray-9a);
   }
-  .text-content code[class*="language-"], .text-content pre[class*="language-"] {
-    color: var(--gray-80);
-  }
-  .text-content pre {
-    background-color: var(--gray-08);
-  }
-  .text-content pre code {
-    color: var(--gray-9a);
-  }
-  .text-content pre.line-numbers {
-    background-color: var(--gray-08);
-    color: var(--gray-9a);
-  }
-  .text-content .example-bad, .text-content .example-bad::after,
-  .text-content pre[class*="language-"].example-bad,
-  .text-content pre[class*="language-"].example-bad::after,
-  .text-content .example-good, .text-content .example-good::after,
-  .text-content pre[class*="language-"].example-good,
-  .text-content pre[class*="language-"].example-good::after {
-    background-color: var(--gray-08);
+  kbd {
+    background: var(--gray-08);
+    box-shadow: none;
+    border-color: var(--gray-5);
   }
   /* iframes */
   .interactive, .live-sample-frame {
     filter: invert(100%) hue-rotate(180deg);
   }
   /* notes */
-  .draft, .indicator-warning, .note, .notice, .prefixBox, .privilegedBadge,
-  .renamed, .secureContexts, .todo, .translationInProgress,
-  .warning.warning-review {
+  .notecard.success, .notecard.note, .notecard.warning, .notecard.experimental,
+  .notecard.draft, .notecard.secure, .notecard.negative, .notecard.obsolete,
+  .notecard.deprecated {
     background-color: var(--gray-2);
+    color: var(--gray-9);
   }
   .indicator-info, .optional, .template-jsOverrides {
-    background-color: var(--gray-2);
-  }
-  .deprecated, .deprecatedBadge, .indicator-danger, .nonStandard,
-  .nonstandardBadge, .obsolete, .obsoleteBadge, .unimplemented,
-  .unimplementedBadge, .warning {
-    background-color: var(--gray-2);
-  }
-  .domLevel, .experimental, .experimentalBadge, .firefoxVersionBadge,
-  .geckoMinVer, .geckoMinVerMethod, .geckoVersionBadge, .geckoVersionNote,
-  .htmlVer, .indicator-version, .jsMinVer, .jsMinVerHeader, .mbMinVer,
-  .mobileOnly, .notXPCOM, .projectSpecific, .smMinVerHeader, .standardNote,
-  .tbMinVer {
-    background-color: var(--gray-2);
-  }
-  .indicatorInHeadline, .inlineIndicator, .spec-CR::before, .spec-Draft::before,
-  .spec-ED::before, .spec-Living::before, .spec-PR::before, .spec-RC::before,
-  .spec-REC::before, .spec-RFC::before, .spec-Standard::before, .spec-WD::before {
     background-color: var(--gray-2);
   }
   .reviews {
@@ -327,28 +326,12 @@
     background-color: var(--gray-1);
   }
   /* tables */
-  .text-content .cssprop, .text-content .htmlelt, .text-content .learn-box,
-  .text-content .properties, .text-content .summary-box-events,
-  .text-content .summary-box-js {
+  .standard-table td, .standard-table th {
     background-color: var(--gray-2);
+    border-color: var(--gray-7);
   }
-  .text-content code[class*="language-"], .text-content pre[class*="language-"] {
-    background-color: var(--gray-08);
-  }
-  .text-content table.standard-table:not(.learn-box) th {
-    color: var(--gray-1);
-  }
-  .text-content table.standard-table:not(.learn-box) td {
+  .properties td, .properties th {
     background-color: var(--gray-2);
-  }
-  .text-content table.standard-table:not(.learn-box):not(.nostripe) tr:nth-child(2n+1) td {
-    background-color: var(--gray-3);
-  }
-  .text-content table.standard-table:not(.learn-box) td.header,
-  .text-content table.standard-table:not(.learn-box) th,
-  .text-content table.standard-table:not(.learn-box) td,
-  .text-content table.standard-table:not(.learn-box) {
-    border-color: var(--gray-1);
   }
   /* compatability table */
   .bc-table {
@@ -356,6 +339,12 @@
   }
   .bc-table th {
     color: var(--gray-1);
+  }
+  .bc-table .bc-table-row-header code {
+    color: var(--gray-08);
+  }
+  .bc-table tbody tr:nth-child(2n) {
+    background-color: transparent;
   }
   .bc-legend .ic-altname, .bc-legend .ic-deprecated, .bc-legend .ic-disabled,
   .bc-legend .ic-experimental, .bc-legend .ic-footnote,
