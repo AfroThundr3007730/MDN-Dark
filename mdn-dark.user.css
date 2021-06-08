@@ -233,16 +233,14 @@
   .search-pane {
     background-color: var(--gray-2);
   }
-  .search-results-list .title a:link,
-  .search-results-list .title a:visited {
+  .search-results-list .title a:link, .search-results-list .title a:visited {
     color: var(--gray-9);
   }
   .search-results-list mark {
     background-color: var(--red-1);
   }
-  .search-results .highlight,
-  .search-results .summary {
-      color: var(--gray-9);
+  .search-results .highlight, .search-results .summary {
+    color: var(--gray-9);
   }
   .article .prev-next a.button, .article .prevnext a.button {
     color: var(--gray-e);
