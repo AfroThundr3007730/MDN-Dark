@@ -37,7 +37,7 @@
   h1, h2, h3, h4, h5, h6, header {
     color: var(--gray-9);
   }
-  a:link, a:visited {
+  a:link, a:visited, .notecard a:link, .notecard a:visited {
     color: var(--blue-3);
   }
   .article h2 a:link, .article h2 a:visited, .article h2 code {
@@ -313,6 +313,7 @@
   .notecard.deprecated {
     background-color: var(--gray-2);
     color: var(--gray-9);
+  }
   }
   .indicator-info, .optional, .template-jsOverrides {
     background-color: var(--gray-2);
