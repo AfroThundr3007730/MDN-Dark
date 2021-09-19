@@ -314,7 +314,6 @@
     background-color: var(--gray-2);
     color: var(--gray-9);
   }
-  }
   .indicator-info, .optional, .template-jsOverrides {
     background-color: var(--gray-2);
   }
