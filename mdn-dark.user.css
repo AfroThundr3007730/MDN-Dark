@@ -131,7 +131,7 @@
   #main-header .nav-main-item > a, .login > a, .toolbox > ul > li > a {
     color: var(--blue-1);
   }
-  .main-menu, .page-header {
+  .main-menu, .page-header, .breadcrumb-locale-container {
     background-color: var(--gray-2);
   }
   ul.main-menu, .page-header-main {
