@@ -20,7 +20,7 @@
     "versions": "^8.4.3"
   },
   "scripts": {
-    "authors": "bash tools/authors",
+    "authors": "bash tools/authors.sh",
     "clean": "npm run perfectionist && node tools/fix-perfectionist.js",
     "lint": "eslint tools/*.js && stylelint mdn-dark.user.css",
     "patch": "versions -p -C patch mdn-dark.user.css",

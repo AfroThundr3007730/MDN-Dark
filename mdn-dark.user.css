@@ -34,7 +34,9 @@
   main {
     background: var(--gray-1);
   }
-  h1, h2, h3, h4, h5, h6, header, .main-page-content h2 a:link, .main-page-content h2 a:visited, .main-page-content h3 a:link, .main-page-content h3 a:visited {
+  h1, h2, h3, h4, h5, h6, header, .main-page-content h2 a:link,
+  .main-page-content h2 a:visited, .main-page-content h3 a:link,
+  .main-page-content h3 a:visited {
     color: var(--gray-9);
   }
   a:link, a:visited, .notecard a:link, .notecard a:visited {
