@@ -287,6 +287,10 @@
     background-color: var(--gray-08);
     color: var(--gray-9a);
   }
+  .language-css .token.string, .style .token.string, .token.entity,
+  .token.operator, .token.url {
+    color: var(--gray-3);
+  }
   .quick-links :not(pre) > * > code, .quick-links :not(pre) > code {
     color: var(--gray-9a);
   }
