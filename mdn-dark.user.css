@@ -102,6 +102,9 @@
   mark {
     color: var(--gray-e);
   }
+  .button.minimal {
+    color: var(--gray-1);
+  }
   /* meta */
   .activity thead {
     background-color: var(--gray-3);
@@ -180,6 +183,8 @@
   .breadcrumbs li a.crumb-current-page:visited {
     color: var(--blue-3);
   }
+  .breadcrumbs-container li:last-child a:link,
+  .breadcrumbs-container li:last-child a:visited,
   .breadcrumbs li:last-child a:link, .breadcrumbs li:last-child a:visited {
     color: var(--blue-3);
   }
@@ -250,6 +255,14 @@
   /* icons */
   .icon-search {
     filter: brightness(50%);
+  }
+  .search-button {
+    filter: brightness(800%) invert(85%);
+  }
+  a.external:after, ul.language-toggle .language-icon:before,
+  .breadcrumbs-container li .breadcrumb-penultimate:after,
+  .breadcrumbs-container li .breadcrumb:after {
+    filter: invert(30%);
   }
   .logo, .nav-footer-logo, .nav-footer-mozilla, .login-link .icon,
   #wikiArticle i.icon-beaker, #wikiArticle i.icon-stethoscope,
@@ -344,6 +357,15 @@
   }
   .properties td, .properties th {
     background-color: var(--gray-2);
+  }
+  table th {
+    background-color: var(--gray-3);
+  }
+  table td {
+    background-color: var(--gray-2);
+  }
+  table, table td, table th {
+    border-color: var(--gray-5);
   }
   /* compatability table */
   .bc-table {
