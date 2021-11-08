@@ -105,6 +105,20 @@
   .button.minimal {
     color: var(--gray-1);
   }
+  .hero {
+    background-color: var(--gray-1);
+  }
+  .page-footer .twitter::before, .page-footer .github::before,
+  .page-footer .instagram::before {
+    filter: invert(50%);
+  }
+  .blog-feed ul li, .contribute ul li {
+    border-color: var(--gray-5);
+  }
+  .page-footer .footer-license {
+    border-color: var(--gray-5);
+    color: var(--gray-9a);
+  }
   /* meta */
   .activity thead {
     background-color: var(--gray-3);
